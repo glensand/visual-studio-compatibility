@@ -1,16 +1,37 @@
 #include "ExportClass.h"
 #include <iostream>
 
-ExportClass::ExportClass(void)
+ExportClass::ExportClass()
 {
 }
 
 
-ExportClass::~ExportClass(void)
+ExportClass::~ExportClass()
 {
 }
 
-void ExportClass::hello()
+ExportClass::StringList ExportClass::getStringList() const
 {
-	std::cout << "lol" << std::endl;
+	StringList rValue;
+	rValue.emplace_back("test_string1");
+	rValue.emplace_back("ultra long test string for memory corruption");
+	rValue.emplace_back("ultimately long test string for memory corruption");
+	return rValue;
+}
+
+ExportClass* ExportClass::Create()
+{
+	return new ExportClass();
+}
+
+void ExportClass::Destroy(ExportClass* ptr)
+{
+	delete ptr;
+}
+
+void ExportClass::Fill(StringList& list)
+{
+	list.emplace_back("test_string1");
+	list.emplace_back("ultra long test string for memory corruption");
+	list.emplace_back("ultimately long test string for memory corruption");
 }

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vs2019", "vs2019\vs2019.vcxproj", "{8177FFC6-CF66-44B6-963C-71F98CFA21D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C93CB41-FF1D-496A-8EB7-C8D774F2703D} = {3C93CB41-FF1D-496A-8EB7-C8D774F2703D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vs2012", "vs2012\vs2012.vcxproj", "{3C93CB41-FF1D-496A-8EB7-C8D774F2703D}"
 EndProject
