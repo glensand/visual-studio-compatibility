@@ -3,15 +3,16 @@
 
 int main()
 {
-	// Конструктор - Деструктор отрабатывают нормально
+	// stack object construction - destruction works well
 	ExportClass ec;
 	
-	// Вызывает мемори корапт
+	// we cannot deallocate memory were allocated in another module
+	// it seems like wrong dll loading
 	//const auto vector = ec.getStringList();
 	//std::vector<std::string> testNotTrivialVector;
 	//ExportClass::Fill(testNotTrivialVector);
 
-	// Работает нормально
+	// also memory allocation and deallocation if it were done in single module works
 	auto exportClassPtr = ExportClass::Create();
 	ExportClass::Destroy(exportClassPtr);
 
