@@ -1,5 +1,5 @@
 #include "ExportClass.h"
-#include <iostream>
+#include "Exportedv141.h"
 
 int main()
 {
@@ -14,7 +14,11 @@ int main()
 
 	// also memory allocation and deallocation if it were done in single module works
 	auto exportClassPtr = ExportClass::Create();
-	ExportClass::Destroy(exportClassPtr);
+	delete exportClassPtr;
+	//ExportClass::Destroy(exportClassPtr);
+
+	auto vc141Exported = Exportedv141::Create();
+	delete vc141Exported;
 
 	return 0;
 }
