@@ -1,5 +1,4 @@
 #include "export_class_110.h"
-
 #include <iostream>
 
 export_class_110::export_class_110() {

@@ -11,6 +11,5 @@
 #ifdef  MYDLL_EXPORTS 
     #define API __declspec(dllexport)  
  #else
-    /*Enabled as "import" in the Client side for using already created dll file*/
     #define API __declspec(dllimport)  
  #endif

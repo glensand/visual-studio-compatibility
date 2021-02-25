@@ -9,7 +9,6 @@
 #pragma once
 
 #ifdef  MYDLL_EXPORTS 
-    /*Enabled as "export" while compiling the dll project*/
     #define API __declspec(dllexport)  
  #else
     #define API __declspec(dllimport)  
