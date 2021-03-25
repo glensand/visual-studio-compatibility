@@ -16,9 +16,15 @@
     <ClInclude Include="export_class_110.h">
       <Filter>export</Filter>
     </ClInclude>
+    <ClInclude Include="base_class_110.h">
+      <Filter>export</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="export_class_110.cpp">
+      <Filter>export</Filter>
+    </ClCompile>
+    <ClCompile Include="base_class_110.cpp">
       <Filter>export</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,5 +1,6 @@
 #include "v110/export_class_110.h"
 #include "v141/export_class_141.h"
+#include "v142/derived_class_142.h"
 
 int main()
 {
@@ -18,6 +19,8 @@ int main()
 
 	auto* export_141 = export_class_141::create();
 	delete export_141;
+
+	derived_class_142 instance;
 
 	return 0;
 }

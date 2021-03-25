@@ -88,10 +88,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="base_class_110.h" />
     <ClInclude Include="export.h" />
     <ClInclude Include="export_class_110.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="base_class_110.cpp" />
     <ClCompile Include="export_class_110.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
