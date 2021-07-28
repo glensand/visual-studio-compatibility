@@ -6,10 +6,10 @@ base_class_110::base_class_110() {
         vec.push_back(str);
 }
 
-base_class_110::~base_class_110() {
-    for (auto&& f : fun)
-        f();
-}
+//base_class_110::~base_class_110() {
+//    for (auto&& f : fun)
+//        f();
+//}
 
 void base_class_110::add_fun(const std::function<void()>& f) {
     fun.push_back(f);

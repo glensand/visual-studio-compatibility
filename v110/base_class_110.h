@@ -1,4 +1,4 @@
-/* Copyright (C) 2020 - 2021 Gleb Bezborodov - All Rights Reserved
+/* Copyright (C) 2021 Gleb Bezborodov - All Rights Reserved
  * You may use, distribute and modify this code under the
  * terms of the MIT license.
  *
@@ -13,10 +13,19 @@
 #include <string>
 #include <functional>
 
-class base_class_110 {
+class ref_counted {
+public:
+	virtual ~ref_counted() {}
+};
+
+class base_class_110 : public ref_counted {
 public:
 	API base_class_110();
-	virtual API ~base_class_110();
+
+	virtual API ~base_class_110() {
+		for (auto&& f : fun)
+			f();
+	}
 
 	void API add_fun(const std::function<void()>& f);
 protected:
