@@ -1,4 +1,5 @@
 #include "class_110.h"
+#include <typeinfo>
 
 string::string(const char* _c): c(_c)
 {
